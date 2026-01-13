@@ -1,3 +1,64 @@
+## Slooze Inventory (Take Home Challenge - Frontend)
+
+Role-based commodities/products management UI built with Next.js, TypeScript, and Tailwind CSS.
+
+### Prerequisites
+
+- Node.js v18+ recommended
+- npm (or yarn/pnpm)
+
+### Install & Run
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## App Details
+
+### Routes
+
+- `/` - Landing page
+- `/login` - Login page
+- `/products` - Products list (requires login)
+- `/dashboard` - Dashboard (requires login + Manager role)
+
+### Sample Credentials
+
+- Manager
+  - Email: `manager@slooze.com`
+  - Password: `manager123`
+- Store Keeper
+  - Email: `store@slooze.com`
+  - Password: `store123`
+
+### I given Role-Based Access Rules Hardcoded values
+
+- Manager
+  - Dashboard: allowed
+  - Products: allowed
+- Store Keeper
+  - Dashboard: not allowed (redirects to `/products`)
+  - Products: allowed
+
+### Light/Dark Mode
+
+- Theme toggle persists to `localStorage` (`theme=dark|light`).
+- Adds/removes the `dark` class on `<html>` to enable Tailwind `dark:` styles.
+
+### Data Source (Current)
+
+- Users and products are currently data in:
+  currently i used hardcoded
+  - `src/data/users.ts`
+  - `src/data/products.ts`
+
+> Note: Backend API integration is not added in this yet.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
